@@ -1,0 +1,90 @@
+.xbox-logo-animation {
+    position: relative;
+    width: 100%;
+    min-width: 100px;
+    // max-width: 200px;
+    height: 100%;
+    opacity: 1;
+    // border: 3px solid yellow;
+}
+
+.holo-select-animation {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+
+    transition: 0.5s;
+    z-index: 2;
+
+    .circle-path {
+        width: 100%;
+        height: inherit;
+        opacity: 0.8;
+    }
+
+    &:hover {
+        transform: scale(1.22);
+        cursor: pointer;
+    }
+}
+
+
+
+.geo-path {
+    width: 100%;
+    fill: none;
+    stroke: purple;
+    stroke-width: 20px;
+    stroke-dasharray: 200;
+}
+
+.xbox-logo-vector {
+    position: relative;
+    width: 75%;
+    margin: 0 auto;
+    max-width: 100%;
+    height: inherit;
+}
+
+
+.xGradient {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+}
+
+.xbox-logo-top {
+
+}
+
+
+.xbox-logo-left {
+
+}
+
+.xbox-logo-bot {
+
+}
+
+.xbox-logo-right {
+
+}
+
+
+
+.top-left-xGradient {
+
+}
+
+.top-right-xGradient {
+
+}
+
+.bot-left-xGradient {
+
+}
+
+.bot-right-xGradient {
+
+}

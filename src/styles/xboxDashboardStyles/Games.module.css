@@ -1,0 +1,124 @@
+#gamesContextContainer {
+    z-index: var(--z-depth);
+    height: inherit;
+}
+
+#games {
+}
+
+.selectItemListContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+.innerListContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 30px);
+    margin-top: -5px;
+}
+
+.innerListContainer > .listItem {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    /* background-color: chocolate; */
+}
+
+.listItem:first-child:before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    margin-top: 5px;
+    height: 2px;
+    background-color: rgba(9, 9, 9, 0.349);
+}
+
+.listItem:after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    margin-top: 50px;
+    height: 2px;
+    background-color: rgba(9, 9, 9, 0.349)
+}
+
+.listItem > .listIcon {
+    width: 75px;
+}
+
+.listItem > p {
+    padding-top: 15px;
+    font-size: 1.4rem;
+}
+
+
+
+.innerListContainer > div > p {
+    position: relative;
+    display: inline-block;
+}
+
+
+.listIcon {
+    position: relative;
+    display: inline-block;
+    /* width: 100px; */
+    height: 100%;
+    margin-top: 10px;
+}
+
+.joystick_icon {
+    background-image: url('../../assets/xboxDashboardAssets/icons/joystick_icon.png');
+    background-size: 35%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transform: rotate(-15deg);
+}
+
+.trophy_icon {
+    background-image: url('../../assets/xboxDashboardAssets/icons/trophy_icon.png');
+    background-size: 32%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+}
+
+.controller_icon {
+    background-image: url('../../assets/xboxDashboardAssets/icons/controller_icon.png');
+    background-size: 42%;
+    background-position: 55% 50%;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+}
+
+
+.xboxliveAnimationContainer {
+    opacity: 0;
+}
+
+.xbox360Logo {
+    position: relative;
+    max-height: 150px;
+    height: 100%;
+    width: 100%;
+    background-image: url('../../assets/xboxDashboardAssets/images/xbox360_logo.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-bottom: 20px;
+}
+
+.boxShadow {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0));
+    filter: blur(1px);
+}

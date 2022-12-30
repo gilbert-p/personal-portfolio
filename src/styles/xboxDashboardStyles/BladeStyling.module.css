@@ -1,0 +1,316 @@
+/*** Outer blade container and individual blade containers ***/
+
+.bladeContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    left: 170px;
+    /* background-color: lightskyblue; */
+    /* border: 2px solid red; */
+    z-index: 10;
+    /* transform: translateX(var(--shiftIndex, 0) * var(--blade-size, 0)); */
+    transition: transform 0.8s ease-out;
+    /* pointer-events: none; */
+    /* justify-content: space-between; */
+    /* margin-left: -20px; */
+    /* overflow: hidden; */
+    /* transform: translateX(-170px); */
+    /* left: -350px; */
+    /* transform: translateX(38%); */
+}
+
+.centeredContent {
+    position: absolute;
+    width: var(--container-width);
+    height: var(--container-height);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    /* background-color: lightseagreen; */
+}
+
+.blade {
+    position: absolute;
+    /* left: -90px; */
+    /* width: 30px; */
+    /* width: var(--blade-size); */
+    height: 100%;
+    /* background-color: greenyellow; */
+    /* border: 1px solid black; */
+    transition: transform 0.6s ease-in;
+    /* pointer-events: none; */
+    overflow: visible;
+    /* left: calc(((100vh) * (-1/9))); */
+}
+
+
+.bladeGroup {
+    position: relative;
+    height: 100%;
+    width: 35px;
+    left: 45px;
+    /* background-color: red; */
+    overflow: visible;
+    
+}
+
+.bladeImgContainer {
+    position: absolute;
+    height: calc( 100% + 40px);
+    top: -20px;
+    left: 30px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(-35px);
+    filter: drop-shadow(-1 px 0px 4px #ffffff09);
+    /* background-color: red; */
+    pointer-events: none;
+    
+}
+
+.svgInteractiveContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.marketplaceActiveBlade {
+    background-image: url("../assets/images/new_marketplace_blade.png")
+}
+
+.xboxliveActiveBlade {
+    background-image: url("../assets/images/xboxlive_active_blade.png")
+}
+
+.gamesActiveBlade {
+    background-image: url("../assets/images/games_active_blade.png");
+}
+
+.mediaActiveBlade {
+    background-image: url("../assets/images/media_active_blade.png");
+}
+
+.systemActiveBlade {
+    background-image: url("../assets/images/system_active_blade.png");
+}
+
+
+.rightBladeInactive {
+    background-image: url("../assets/images/inactive_blade_right.png");
+}
+
+.leftBladeInactive {
+    background-image: url("../assets/images/inactive_blade_left_redesign.png");
+}
+
+.leftGroup {
+    position: absolute;
+    height: inherit;
+    left: -170px;
+}
+
+.rightGroup {
+    position: absolute;
+    height: inherit;
+    left: calc(100% - 305px);
+    /* left: 300px; */
+}
+
+/* .blade:nth-child(1) {
+    transform: translateX(calc(((100vh) * (1/(22)))));
+} */
+
+
+.blade:nth-child(2){
+    transform: translateX(calc(((100vh) * (1/(22)))));
+}
+
+.blade:nth-child(3){
+    transform: translateX(calc(((100vh) * (1/(10.8)))));
+}
+
+.blade:nth-child(4) {
+    transform: translateX(calc(((100vh) * (1/7.2))));
+}
+
+.blade:nth-child(5) {
+    transform: translateX(calc(((100vh) * (1/5.3))));
+}
+
+
+
+
+
+.blade > p {
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: rotate(90deg) translateX(-50%);
+    white-space: nowrap;
+}
+
+
+
+
+
+/*** SVG STYLING ***/
+
+svg {
+    /* pointer-events: none; */
+    height: auto;
+    transform-origin: 50% 50% ;
+}
+
+path {
+    pointer-events: auto;
+    height: 100%;
+    /* cursor: pointer; */
+}
+
+
+.bladeBase {
+    position: absolute;
+    z-index: -1;
+    width: inherit;
+    min-width: auto;
+    max-width: 65px;
+    height: inherit;
+    left: 0;
+    fill: url("#paint0_radial_216_168");
+    stroke: black;
+    stroke-opacity: 0.5;
+}
+
+.bladeJewel {
+    position: absolute;
+    width: inherit;
+    min-width: auto;
+    max-width: 65px;
+    height: inherit;
+    /* ???? */
+    left: calc(((100vh) * (1/32)));
+    transform: translateX(0);
+}
+
+.bladeBaseRight {
+    z-index: -1;
+    top: 0;
+}
+
+.bladeJewelRight {
+    top: 0;
+    left: calc(((100vh) * (-1/60)));
+    transform: translateX(0%);
+}
+
+.activeMarketplaceJewelFill {
+    fill: url("#paint0_radial_217_185");
+}
+
+.activeXboxliveJewelFill {
+    fill: url("#paint0_radial_217_189");
+    transition: fill 2s;
+}
+
+.activeGamesJewelFill {
+    fill: url("#paint0_radial_217_181");
+}
+
+.activeMediaJewelFill {
+    fill: url("#paint0_radial_217_193");
+}
+
+.activeSystemJewelFill {
+    fill: url("#paint0_radial_217_197");
+}
+
+.inactiveBladeFill {
+    /* transform: scale(0.80) translateY(40px); */
+    fill: url("#paint0_radial_216_167");
+    transition: fill 2s;
+}
+
+.singleBladeGroup {
+    height: inherit;
+    width: inherit;
+}
+
+
+.transitionBlade {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    background-color: purple;
+    opacity: 1;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .bladeContainer {
+        transform: translateX(-50%)  scale(0.5);
+        width: 100%;
+        left: 51%;
+    }
+
+    .leftGroup {
+        left: -10%;
+    }
+
+    .rightGroup {
+        position: relative;
+        left: 100%;
+        transform: translateX(-30%);
+    }
+
+    .centeredContent {
+        transform: translate(-50%, -50%);
+    }
+
+    .blade:nth-child(n+1){
+        transform: translateX(100px);
+    }
+
+    #marketplaceBlade-left {
+        transform: translate(calc(((100vh) * (1/5))))
+    }
+
+    #xboxliveBlade-left{
+        transform: translateX(calc(((100vh) * (3/10))));
+    }
+
+    #gamesBlade-left {
+        transform: translateX(calc(((100vh) * (3/(7.7)))));
+    }
+
+    #mediaBlade-left {
+        transform: translateX(calc(((100vh) * (3/(6.3)))));
+    }
+
+    #systemBlade-left {
+        transform: translateX(calc(((100vh) * (3/(5.3)))));
+    }
+
+
+    #xboxliveBlade-right{
+        transform: translateX(calc(((100vh) * (3/10))));
+    }
+
+    #gamesBlade-right {
+        transform: translateX(calc(((100vh) * (3/(7.7)))));
+    }
+
+    #mediaBlade-right {
+        transform: translateX(calc(((100vh) * (3/(6.3)))));
+    }
+
+    #systemBlade-right {
+        transform: translateX(calc(((100vh) * (3/(5.3)))));
+    }
+
+    .blade {
+        /* transform: translateX(-90px); */
+    }
+}

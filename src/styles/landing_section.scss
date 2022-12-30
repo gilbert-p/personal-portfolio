@@ -1,0 +1,116 @@
+.landing-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    background-image: url("../assets/Space_Background.png");
+}
+
+.desktopNav-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+    max-height: 100px;
+    background-color: black;
+    opacity: 0.65;
+    top: 30px;
+
+    .website-logo {
+        width: 100px;
+        height: 100%;
+        max-height: 80px;
+        // background-color: lightgreen;
+        margin-top: 10px;
+        margin-left: 100px;
+
+        >img:nth-child(1){
+            position: relative;
+            left: -50%;
+            top: -50%;
+            animation: rotateLogo 70s ease-in-out infinite alternate;
+        }
+
+        > img:nth-child(2) {
+            position: relative;
+            left: -50%;
+            top: -300%;
+            // transform: scale(0.5);
+            // width:100px;
+            animation: rotateSecondaryLogo 8s ease-in-out infinite alternate;
+        }
+    }
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: scale(0.8) rotate(0);
+    }
+    to {
+        transform: scale(0.8) rotate(3600deg);
+    }
+}
+
+@keyframes rotateSecondaryLogo {
+    from {
+        transform: scale(0.3) rotate(0);
+    }
+    to {
+        transform: scale(0.8) rotate(540deg);
+    }
+}
+
+.main-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100%);
+    height: auto;
+    // border: 5px solid lightskyblue;
+    margin-top: 25px;
+
+    .navigation-container {
+        // display: inline-block;
+        // background-color:
+        width: 100%;
+        max-width: 330px;
+        min-width: 220px;
+        height: 600px;
+        // border: 2px solid red;
+        margin-left: 100px;
+        margin-top: 100px;
+        margin-right: 100px;
+
+        .nav-button-block {
+            width: 100%;
+            height: 80px;
+            // background-color: lightskyblue;
+            margin-bottom: 50px;
+            background-image: url('../assets/nav-button.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            > span {
+                position: relative;
+                display: inline-block;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-size: 36px;
+                margin-top: 20px
+            }
+        }
+    }
+
+    .hero-display {
+        // position: relative;
+        height: 100%;
+        width: 100%;
+        max-width: 800px;
+        // border: 2px solid green;
+        margin-right: 250px;
+    }
+
+}

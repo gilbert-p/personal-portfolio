@@ -1,13 +1,52 @@
+@font-face {
+  font-family: Convection;
+  src: url('./assets/xboxDashboardAssets/fonts/Conv.ttf');
+}
+
+@font-face {
+  font-family: Convection;
+  src: url('./assets/xboxDashboardAssets/fonts/Conv.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Convection;
+  src: url('./assets/xboxDashboardAssets/fonts/Conv.ttf');
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: #E8EEF1;
+  font-family: 'Outfit', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+h1,h2,h3,h4,p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  text-align: left;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+.flowcontrol-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }

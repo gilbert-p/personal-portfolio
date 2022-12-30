@@ -1,0 +1,381 @@
+/* .bladeOrientationOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(82, 82, 82);
+    z-index: 999;
+} */
+
+
+.dashboardComponent {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    /* max-width: 1920px;
+    max-height: 1080px; */
+}
+
+.mainContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: calc(var(--container-width));
+    height: calc(var(--container-height));
+    /* border: 10px solid red; */
+}
+
+.bladeMask {
+    position: absolute;
+    width: 100%;
+    height: var(--container-height);
+    /* background-color: teal; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+
+.bladeContainerMask {
+    position: absolute;
+    width: 100%;
+    height: var(--container-height);
+    left: 50%;
+    top: 50%;
+    /* max-height: 760px; */
+    transform: translate(-50%, -50%);
+    /* background-color: #f1f2f6; */
+    /* background-image: linear-gradient(0deg, #B3A89E 0%, #E5E5E5 80%); */
+    overflow: hidden;
+    /* visibility: hidden; */
+}
+
+.topContainerBorder {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(0deg, #B3A89E 0%, #E5E5E5 80%);
+    box-shadow: 0 1px 5px 0 black;
+    z-index: 1;
+}
+
+.bottomContainerBorder {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: calc(100% - 5px);
+    background-image: linear-gradient(0deg, #B3A89E 0%, #E5E5E5 80%);
+    box-shadow: 0 -1px 5px 0 black;
+    z-index: 1;
+}
+
+
+.curvedGlassOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/xboxDashboardAssets/images/glass-overlay.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+.blade > p {
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: rotate(90deg) translateX(-50%);
+    white-space: nowrap;
+}
+
+
+.topBorder {
+    position: absolute;
+    width: calc(100%);
+    height: 90px;
+    left: 51%;
+    transform: translateX(-50%);
+    box-shadow: inset 0 -1px 7px 0px black;
+    border-radius: 0px 0px 70px 70px;
+}
+
+.bottomBorder {
+    position: absolute;
+    width: calc(100%);
+    height: 90px;
+    top: 89%;
+    left: 51%;
+    transform: translateX(-50%);
+    box-shadow: inset 0 -1px 7px 0px black;
+    border-radius: 70px 70px 0px 0px;
+}
+
+.leftEdge {
+    position: absolute;
+    width: 100px;
+    height: 110%;
+    left: -100px;
+    transform: translate(60%, -5%);
+    background: linear-gradient(0deg, #B3A89E 0%, #E5E5E5 80%);
+    border-radius: 50%;
+    border: 8px solid rgb(99, 99, 99);
+}
+
+.rightEdge {
+    position: absolute;
+    width: 100px;
+    height: 110%;
+    left: calc(100% - 100px);
+    transform: translate(60%, -5%);
+    background: linear-gradient(0deg, #B3A89E 0%, #E5E5E5 80%);
+    border-radius: 50%;
+    border: 8px solid rgb(99, 99, 99);
+}
+
+
+
+.buttonContainer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    top: 89%;
+    padding: 0 35px;
+}
+
+.buttons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 100%;
+    margin-top: 5px;
+}
+
+.buttonStyle {
+    width: 100%;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#yButton {
+    background-image: url('../../assets/xboxDashboardAssets/images/y_button.png');
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+#xButton {
+    background-image: url('../../assets/xboxDashboardAssets/images/x_button.png');
+}
+
+#bButton {
+    background-image: url('../../assets/xboxDashboardAssets/images/b_button.png');
+    margin-bottom: 5px;
+    margin-left: -20px;
+}
+
+#aButton {
+    background-image: url('../../assets/xboxDashboardAssets/images/a_button.png');
+}
+
+
+.backgroundsContainer {
+
+}
+
+.pageContentArea {
+    position: absolute;
+    width: calc(100% - 100px);
+    height: 100%;
+
+    /* border: 5px solid limegreen; */
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+
+.staticContent {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    /* border: 5px solid red; */
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+.marketplaceBackground {
+    position: absolute;
+    width: calc(100%);
+    height: 100%;
+    /* background: linear-gradient(89.59deg, #F47B1E 0.88%, #FFA743 50.8%, #F47B1E 99.29%); */
+    background-image: url("../../assets/xboxDashboardAssets/images/marketplace_background.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 75% 50%;
+    z-index: -10;
+}
+
+.xboxliveBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(231deg, rgba(247, 136, 51, 0.7), rgba(243, 171, 88, 0.7));
+    background-size: 400% 400%;
+    /* animation: xboxlive_color_scheme_gradient 10s ease infinite; */
+    z-index: -9;
+}
+
+@keyframes xboxlive_color_scheme_gradient {
+    0%{background-position:0% 87%}
+    50%{background-position:100% 14%}
+    100%{background-position:0% 87%}
+}
+
+.gamesBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(231deg, rgba(104, 207, 56, 0.7), rgba(67, 144, 61, 0.7));
+    background-size: 400% 400%;
+    /* animation: games_color_scheme_gradient 10s ease infinite; */
+    z-index: -8;
+}
+
+@keyframes games_color_scheme_gradient {
+    0%{background-position:0% 87%}
+    50%{background-position:100% 14%}
+    100%{background-position:0% 87%}
+}
+
+
+
+.mediaBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(231deg, rgba(68, 155, 237, 0.7), rgba(41, 124, 196, 0.7));
+    background-size: 400% 400%;
+    /* animation: media_color_scheme_gradient 10s ease infinite; */
+    z-index: -7;
+}
+
+@keyframes media_color_scheme_gradient {
+    0%{background-position:0% 87%}
+    50%{background-position:100% 14%}
+    100%{background-position:0% 87%}
+}
+
+.systemBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(250deg, rgba(141, 110, 209, 0.7), rgba(112, 87, 167, 0.7));
+    /* animation: system_color_scheme_gradient 10s ease infinite; */
+    background-size: 400% 400%;
+    z-index: -6;
+}
+
+@keyframes system_color_scheme_gradient {
+    0%{background-position:0% 71%}
+    50%{background-position:100% 30%}
+    100%{background-position:0% 71%}
+}
+
+.sectionHeading {
+    position: absolute;
+    left: 30px;
+    top: 55px;
+    z-index: 10;
+    color: white;
+    font-weight: 500;
+}
+
+
+
+/*System Tray*/
+
+.systemTrayContainer {
+    position: absolute;
+    width: calc(100% - 200px);
+    height: 70px;
+    left: 50%;
+    top: 76%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+}
+
+.systemTrayContainer > p {
+    /* left: 30px; */
+    position: absolute;
+    top: 50%;
+    left: 85px;
+    transform: translateY(-60%);
+    font-size: 1.4rem;
+}
+
+.trayEllipse {
+    width: 70px;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: inset 0 0 7px 0 black;
+}
+
+.trayRect {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    box-shadow: inset 0 0 4px 0 black;
+}
+
+.trayTriangleButton {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    border-top: 10px solid transparent;
+    border-right: 10px solid rgba(0, 0, 0, 0.466);
+    border-bottom: 10px solid transparent;
+}
+
+.trayRectButton {
+    position: absolute;
+    width: 4px;
+    height: 19px;
+    top: 50%;
+    left: 43px;
+    transform: translateY(-50%);
+    box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.466);
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .mainContainer {
+        transform: translate(-50%,-50%) scale(0.5);
+    }
+}

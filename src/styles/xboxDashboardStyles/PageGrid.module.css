@@ -1,0 +1,57 @@
+.outerContextContainer {
+    position: absolute;
+    width: 100%;
+    opacity: 0.3;
+    animation: appear 0.5s ease-in-out forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.mainGridContent {
+    position: relative;
+    display: grid;
+    height: auto;
+    width: 100%;
+    place-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 2px solid red; */
+    grid-template-columns: minmax(345px, 40%) minmax(345px, 40%);
+    grid-template-rows: 550px;
+    column-gap: 20px;
+    grid-template-areas: 
+    "left-content right-content";
+    transition: opacity 0.4s ease-in;
+    padding: 33px 0;
+}
+
+.leftContent {
+    grid-area: left-content;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.rightContent {
+    grid-area: right-content;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#marketplaceGrid {
+    background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.35) 3%, rgba(255, 255, 255, 0.397) 15%, rgba(255, 255, 255, 0.35) 85% , rgba(255, 255, 255, 0.35) 97%, rgba(255, 255, 255, 0) 100%);
+}
+
+#marketplaceGrid .rightContent {
+    /* justify-content: space-between; */
+}
+

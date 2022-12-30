@@ -1,0 +1,12 @@
+#mediaContextContainer {
+    z-index: var(--z-depth);
+    height: inherit;
+}
+
+
+.leftContent {
+    grid-area: left-content;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}

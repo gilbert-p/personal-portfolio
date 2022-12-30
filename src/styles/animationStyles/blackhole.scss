@@ -1,0 +1,262 @@
+.ellipse-container {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    // border: 3px solid green;
+}
+.ellipse-anim {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-70%);
+    stroke-dasharray: 60;
+    width: 100%;
+    stroke-linecap: round;
+    stroke-width: 10px;
+    animation: dash 60s linear infinite forwards;
+    // border: 5px solid lavender;
+    fill: none;
+}
+
+.ellipse-1 {
+    stroke-dasharray: 300;
+    stroke-linecap: round;
+    stroke: #35058D;
+    stroke-width: 15px;
+}
+
+.ellipse-2 {
+    stroke-dasharray: 220;
+    stroke-linecap: round;
+    stroke: #e76a30;
+    stroke-width: 20px;
+}
+
+.ellipse-3 {
+    stroke-dasharray: 170;
+    stroke-linecap: round;
+    stroke: #77155A;
+    stroke-width: 10px;
+}
+
+
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -2300;
+    }
+}
+
+// MOBILE adjustment (width)
+.blackhole-animation-container {
+    position: relative;
+    display: block;
+    width: 50vw;
+    height: 100vh;
+    max-height: 1080px;
+    // border: 3px solid green;
+    margin: 0 auto;
+}
+
+.blackhole {
+    position: relative;
+    width: 90%;
+    height: 500px;
+    top: 50%;
+    margin: 0 auto;
+    transform: translateY(-70%);
+    // border: 3px solid red;
+    z-index: 2;
+
+}
+
+.blackhole-center-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.blackhole-corona {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.blackhole-corona-vector {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: inherit;
+    width: 40%;
+    max-width: 600px;
+}
+
+#corona-1 {
+    width: 100%;
+    max-width: 600px;
+}
+
+#corona-2 {
+    width: 100%;
+    max-width: 600px;
+}
+
+#corona-3 {
+    width: 100%;
+    max-width: 700px;
+}
+
+#corona-4 {
+    width: 100%;
+    max-width: 800px;
+}
+
+#corona-5 {
+    width: 100%;
+    max-width: 800px;
+}
+
+#cor-1 {
+    transform-origin: center;
+    // animation: scaleCorona-1 2s ease-in-out infinite alternate;
+}
+
+#cor-2 {
+    transform-origin: center;
+    animation: scaleCorona-2 2s ease-in-out infinite alternate;
+}
+
+#cor-3 {
+    transform-origin: center;
+    animation: scaleCorona-3 2s ease-in-out infinite alternate;
+}
+
+#cor-4 {
+    transform-origin: center;
+    // animation-delay: 0.1s;
+    animation: scaleCorona-4 2s ease-in-out infinite alternate;
+}
+
+#cor-5 {
+    transform-origin: center;
+    animation: scaleCorona-5 2s ease-in-out infinite alternate;
+}
+
+@keyframes scaleCorona-1 {
+    from {
+        transform:scale(1);
+    }
+    to {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes scaleCorona-2 {
+    from {
+        transform:scale(1);
+    }
+    to {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes scaleCorona-3 {
+    from {
+        transform:scale(1);
+    }
+    to {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes scaleCorona-4 {
+    from {
+        transform:scale(1);
+    }
+    to {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes scaleCorona-5 {
+    from {
+        transform:scale(1.1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.blackhole-center-vector {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: inherit;
+    width: 35%;
+    max-width: 500px;
+}
+
+.blackhole-exhaust {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-100%, -107%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+    z-index: 3;
+}
+
+.bottom-exhaust {
+    transform: translate(-5%, -0%) rotate(180deg);
+    z-index: 0;
+}
+
+.exhaust-animation-container {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    max-height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.exhaust-line {
+    position: relative;
+    stroke: #01FFFD;
+    stroke-width: 8px;
+    stroke-linecap: round;
+    fill: none;
+    width: inherit;
+    height: inherit;
+    max-height: 1000px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    animation: spewingEnergy 60s linear infinite forwards;
+}
+
+.exhaust-line-1 {
+    stroke-dasharray: 65;
+
+}
+
+@keyframes spewingEnergy {
+    to {
+        stroke-dashoffset: 2000;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .blackhole-animation-container {
+        width: 90vw;
+    }
+}
